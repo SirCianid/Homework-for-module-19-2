@@ -1,0 +1,23 @@
+1. python manage.py shell
+
+2. from task1.models import *
+
+3. Buyer.objects.create(name='AlexLev', balance=5000, age=31) 
+   Buyer.objects.create(name='MartiZebra', balance=5000, age=28)
+   Buyer.objects.create(name='MortiLemur', balance=5000, age=15)
+
+4. Game.objects.create(title='METRO:Exodus', cost=1500, size=65.4, description='Зачем Сталкер2, когда есть это?', age_limited=True) 
+   Game.objects.create(title='GTA V', cost=1299, size=54.3, description='Это Франклин, а это Майкл и Тревор', age_limited=True)
+   Game.objects.create(title='Harry Potter: Antalogy', cost=600, size=25.7, description='Хотите немного магии?')
+
+5. buyer1 = Buyer.objects.get(id=1)
+   buyer2 = Buyer.objects.get(id=2)
+   buyer3 = Buyer.objects.get(id=3)
+
+6. ggame1 = Game.objects.get(id=1)
+   ggame2 = Game.objects.get(id=2)
+   ggame3 = Game.objects.get(id=3)
+
+7. ggame1.buyer.set((buyer1, buyer2)) 
+   ggame2.buyer.set((buyer1, buyer2))
+   ggame3.buyer.set((buyer1, buyer2, buyer3))
